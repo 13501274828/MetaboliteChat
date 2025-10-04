@@ -1,5 +1,5 @@
 model:
-  arch: drugchat
+  arch: metabolitechat
   model_type: pretrain_vicuna
   freeze_gnn: True
   freeze_image_mol: True
@@ -56,12 +56,11 @@ run:
   warmup_steps: 2500
 
   seed: 42
-  output_dir: "/data2/Dingcheng/projects/drugchat/output/exp_v5/"
+  output_dir: "/data2/Dingcheng/projects/metabolitechat/output/exp_v5/"
 
   amp: True
   resume_ckpt_path: null
   
-  # "/data2/Dingcheng/projects/drugchat/output/exp_v3/20250209080/checkpoint_19.pth"
 
   evaluate: False 
   train_splits: ["train"]
