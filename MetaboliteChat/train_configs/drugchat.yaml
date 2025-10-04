@@ -1,0 +1,73 @@
+model:
+  arch: drugchat
+  model_type: pretrain_vicuna
+  freeze_gnn: True
+  freeze_image_mol: True
+  max_txt_len: 200
+  low_resource: False
+  end_sym: "###"
+  prompt_path: "prompts/alignment.txt"
+  prompt_template: '###Human: {} ###Assistant: '
+  ckpt: ""
+  encoder_names:
+  - gnn
+  - image_mol
+  prompt_tuning: 0
+  feat_dims:
+    graph_feat: 300
+    image_feat: 512
+  use_mlp: true
+
+datasets:
+  metabolite:
+    label: "metabolite data"
+    type: default
+    vis_processor:
+      train:
+        name: "blip2_image_train"
+        image_size: 224
+    text_processor:
+      train:
+        name: "blip_caption"
+    data_type:
+    - image
+    - graph
+    build_info:
+      storage: data_public/metabolite_v5/train
+      storage_valid: data_public/metabolite_v5/val
+      storage_test: data_public/metabolite_v5/test
+    sample_ratio: 100
+
+run:
+  task: image_text_pretrain
+  # optimizer
+  lr_sched: "linear_warmup_cosine_lr"
+  init_lr: 2e-4
+  min_lr: 5e-6
+  warmup_lr: 5e-6
+
+  weight_decay: 0.03
+  max_epoch: 15
+  iters_per_epoch: 30000
+  # 12500
+  batch_size_train: 6
+  batch_size_eval: 6
+  num_workers: 1
+  warmup_steps: 2500
+
+  seed: 42
+  output_dir: "/data2/Dingcheng/projects/drugchat/output/exp_v5/"
+
+  amp: True
+  resume_ckpt_path: null
+  
+  # "/data2/Dingcheng/projects/drugchat/output/exp_v3/20250209080/checkpoint_19.pth"
+
+  evaluate: False 
+  train_splits: ["train"]
+  test_splits: ["test"]
+  valid_splits: ["valid"]
+  device: "cuda"
+  world_size: 1
+  dist_url: "env://"
+  distributed: True
