@@ -80,8 +80,10 @@ We provide a checkpoint [here](https://drive.google.com/drive/folders/18KRWlZddQ
 
 
 ## License
+<!-- This repository is under [BSD 3-Clause License](LICENSE.md).
+Many codes are based on [MiniGPT-4](https://github.com/Vision-CAIR/MiniGPT-4) with BSD 3-Clause License [here](LICENSE_MiniGPT4.md), which is based on [Lavis](https://github.com/salesforce/LAVIS) with BSD 3-Clause License [here](LICENSE_Lavis.md). -->
 This repository is under [BSD 3-Clause License](LICENSE.md).
-Many codes are based on [MiniGPT-4](https://github.com/Vision-CAIR/MiniGPT-4) with BSD 3-Clause License [here](LICENSE_MiniGPT4.md), which is based on [Lavis](https://github.com/salesforce/LAVIS) with BSD 3-Clause License [here](LICENSE_Lavis.md).
+Many codes are based on [MiniGPT-4](https://github.com/Vision-CAIR/MiniGPT-4), which is based on [Lavis](https://github.com/salesforce/LAVIS).
 
 
 ## Disclaimer
