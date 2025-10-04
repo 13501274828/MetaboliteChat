@@ -10,7 +10,7 @@ In drug discovery and metabolomics, conventional approaches often require task-s
 - Support multimodal inputs (graphs, images, and text).  
 - Provide free-text outputs rather than constrained classification or regression labels.  
 - Enable multi-turn conversational reasoning, allowing researchers to iteratively explore and refine insights about metabolites.  
-Results demonstrate that MetaboliteChat outperforms both generic LLMs (e.g., GPT-4o) and task-specific baselines, offering richer and more biologically meaningful predictions for metabolite analysis.
+- Results demonstrate that MetaboliteChat outperforms both generic LLMs (e.g., GPT-4o) and task-specific baselines, offering richer and more biologically meaningful predictions for metabolite analysis.
 - To train MetaboliteChat, we collected instruction tuning datasets.
 
 ![overview](figs/pipeline.png)
@@ -22,7 +22,7 @@ Please download the data json files from the [Google drive](https://drive.google
 
 ## Getting Started
 ### System Requirements
-- OS: Ubuntu 20.04+ (tested). Other recent Linux distros should work.
+- OS: Ubuntu 20.04+. Other recent Linux distros should work.
 - GPU: NVIDIA GPU with ≥80 GB VRAM. Training verified on A100 80 GB (driver 560.35.03).
 - CUDA/cuDNN: A CUDA toolkit compatible with your driver (check `nvidia-smi`), plus matching cuDNN.
 - Python: 3.9+ via Miniconda/Conda.
