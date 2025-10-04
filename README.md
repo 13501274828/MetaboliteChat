@@ -13,7 +13,7 @@ In drug discovery and metabolomics, conventional approaches often require task-s
 Results demonstrate that MetaboliteChat outperforms both generic LLMs (e.g., GPT-4o) and task-specific baselines, offering richer and more biologically meaningful predictions for metabolite analysis.
 - To train MetaboliteChat, we collected instruction tuning datasets.
 
-![overview](figs/pipeline5.png)
+![overview](figs/pipeline.png)
 
 ## Datasets
 
