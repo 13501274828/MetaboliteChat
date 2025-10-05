@@ -72,6 +72,10 @@ torchrun --nproc_per_node 1 train.py --cfg-path train_configs/metabolitechat.yam
 ```
 ### 4. Evaluation
 We provide a checkpoint [here](https://drive.google.com/drive/folders/18KRWlZddQh3wfwPr9bzKB-ieQ8X9Pdkd?usp=sharing) by training on 152,222 metabolites.
+You can evaluate the model by running
+```bash
+bash demo.sh
+``` 
 
 ## Acknowledgement
 + [MiniGPT-4](https://minigpt-4.github.io/)
