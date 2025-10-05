@@ -86,8 +86,8 @@ def smiles2graph(smiles_string):
 
 
 def convert_chembl():
-    # with open("/home/youwei/project/drugchat/data/ChEMBL_QA_train.json", "rt") as f:
-    with open("/home/youwei/project/drugchat/data/PubChem_QA.json", "rt") as f:
+    # with open("/home/youwei/project/metabolitechat/data/ChEMBL_QA_train.json", "rt") as f:
+    with open("/home/youwei/project/metabolitechat/data/PubChem_QA.json", "rt") as f:
         js = json.load(f)
     out = []
     for smi, rec in js.items():

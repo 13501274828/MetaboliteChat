@@ -11,14 +11,14 @@ from omegaconf import OmegaConf
 
 from pipeline.common.registry import registry
 from pipeline.models.base_model import BaseModel
-from pipeline.models.drugchat import DrugChat
+from pipeline.models.metbaolitechat import Metabolite
 from pipeline.processors.base_processor import BaseProcessor
 
 
 __all__ = [
     "load_model",
     "BaseModel",
-    "DrugChat",
+    "MetaboliteChat",
 ]
 
 

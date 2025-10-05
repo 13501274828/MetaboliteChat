@@ -22,23 +22,23 @@ def is_number(s):
     except ValueError:
         return False
 
-q_bi=[ 'Is it known whether this drug is administered parenterally?',
- 'Is it known whether this drug is applied topically?',
+q_bi=[ 'Is it known whether this metabolite is administered parenterally?',
+ 'Is it known whether this metabolite is applied topically?',
   'Is this compound a small molecule polymer, such as polystyrene sulfonate?',
  'Is this molecule characterized by a small molecular structure or a protein sequence?',
  'Does this compound satisfy the rule-of-three criteria?',
  'Determine if this molecule is inorganic, meaning it contains only metal atoms and fewer than two carbon atoms.',
- 'Is there a black box warning associated with this drug?',
- 'Is this drug used for therapeutic purposes, rather than for imaging, additives, or other non-therapeutic applications?',
- 'Has this approved drug been withdrawn due to toxicity reasons for all indications, populations, and doses in at least one country (not necessarily the US)?',
- 'Is it known if this drug is the first approved in its class, regardless of the indication or route of administration, acting on a specific target?',
- 'Is it known whether this drug is taken orally?',
- 'Is the drug administered in this specific form, such as a particular salt?',
+ 'Is there a black box warning associated with this metabolite?',
+ 'Is this metabolite used for therapeutic purposes, rather than for imaging, additives, or other non-therapeutic applications?',
+ 'Has this approved metabolite been withdrawn due to toxicity reasons for all indications, populations, and doses in at least one country (not necessarily the US)?',
+ 'Is it known if this metabolite is the first approved in its class, regardless of the indication or route of administration, acting on a specific target?',
+ 'Is it known whether this metabolite is taken orally?',
+ 'Is the metabolite administered in this specific form, such as a particular salt?',
  'Determine if this compound is a prodrug.',
  ]
 q_clf=['What is the highest development stage achieved for this compound across all indications? Please respond with Approved, Phase 3 Clinical Trials, Phase 2 Clinical Trials, Phase 1 Clinical Trials, Early Phase 1 Clinical Trials, or Clinical Phase Unknown.',
- 'Determine if this drug is administered as a racemic mixture, a single stereoisomer, an achiral molecule, or has an unknown chirality.',
- 'Determine the type of availability for this drug.',
+ 'Determine if this metabolite is administered as a racemic mixture, a single stereoisomer, an achiral molecule, or has an unknown chirality.',
+ 'Determine the type of availability for this metabolite.',
  'Is this compound an acid, a base, or neutral?',
  'What is the classification of this molecule? Please respond with Small Molecule, Protein, Antibody, Oligosaccharide, Oligonucleotide, Cell, Enzyme, Gene, or Unknown.',
  ]
@@ -55,10 +55,10 @@ q_num=['What is the polar surface area (PSA) value of this compound?',
  'How many hydrogen bond donors does this compound have?',
  'What is the molecular weight of this compound\'s parent molecule?',
  ]
-q_sen=[#'What is the first recorded year of approval for this drug?',
+q_sen=[#'What is the first recorded year of approval for this metabolite?',
  "What is the definition of this compound's USAN stem?",
- 'Which USAN substem can this drug or clinical candidate name be matched with?',
- "Please provide a description of this drug's mechanism of action.",
+ 'Which USAN substem can this metabolite or clinical candidate name be matched with?',
+ "Please provide a description of this metabolite's mechanism of action.",
  'What is the molecular formula of this compound, including any salt that it may have?',]
 
 q_all=list(set(q_bi+q_clf+q_num+q_sen))

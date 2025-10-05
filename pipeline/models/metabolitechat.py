@@ -33,14 +33,14 @@ class StoppingCriteriaSub(StoppingCriteria):
         return False
 
 
-@registry.register_model("drugchat")
-class DrugChat(BaseModel):
+@registry.register_model("metabolitechat")
+class MetaboliteChat(BaseModel):
     """
     GNN GPT-LLAMA model.
     """
 
     PRETRAINED_MODEL_CONFIG_DICT = {
-        "pretrain_vicuna": "configs/models/drugchat.yaml",
+        "pretrain_vicuna": "configs/models/metabolitechat.yaml",
     }
 
     def __init__(
@@ -148,7 +148,7 @@ class DrugChat(BaseModel):
                 raw_prompts = f.read().splitlines()
             filted_prompts = [raw_prompt for raw_prompt in raw_prompts if "<compoundHere>" in raw_prompt]
             self.prompt_list = [prompt_template.format(p) for p in filted_prompts]
-            # self.prompt_list = ["###Human: <compound><compoundHere></compound>###Human: Can you describe the mechanism of this drug?###Assistant:"]
+            # self.prompt_list = ["###Human: <compound><compoundHere></compound>###Human: Can you describe the mechanism of this metabolite?###Assistant:"]
             print('Load {} training prompts'.format(len(self.prompt_list)))
             print('Prompt Example \n{}'.format(random.choice(self.prompt_list)))
         else:
@@ -467,7 +467,7 @@ class DrugChat(BaseModel):
             lora_rank=lora_rank,
         )
 
-        ckpt_path = cfg.get("ckpt", "")  # load weights of DrugChat
+        ckpt_path = cfg.get("ckpt", "")  # load weights of MetaboliteChat
         if ckpt_path:
             ckpt = torch.load(ckpt_path, map_location="cpu")
             msg = model.load_state_dict(ckpt['model'], strict=False)

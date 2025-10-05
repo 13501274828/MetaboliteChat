@@ -52,7 +52,7 @@ pip install numpy
 python dataset/smiles2graph_image_demo.py
 ```
 
-### 2. Prepare the pretrained Vicuna weights**
+### 2. Prepare the pretrained Vicuna weights
 
 The current version of MetaboliteChat is built on Vicuna-13B-v1.5.
 Please download Vicuna weights from [https://huggingface.co/lmsys/vicuna-13b-v1.5](https://huggingface.co/lmsys/vicuna-13b-v1.5).

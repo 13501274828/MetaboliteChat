@@ -8,8 +8,8 @@ datasets:
         image_size: 224
         name: blip2_image_eval
 model:
-  arch: drugchat
-  ckpt: /data2/Dingcheng/projects/drugchat/output/exp_v3/20250214175/checkpoint_best.pth
+  arch: metabolitechat
+  ckpt: /data2/Dingcheng/projects/metabolite/output/exp_v3/20250214175/checkpoint_best.pth
   encoder_names:
   - gnn
   - image_mol
